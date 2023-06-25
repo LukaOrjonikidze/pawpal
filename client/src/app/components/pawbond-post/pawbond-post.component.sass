@@ -1,0 +1,83 @@
+@import '../../../styles.sass'
+
+.pawbond-post
+  border-radius: 2rem
+  display: grid
+  grid-template-columns: 2fr 1fr
+  gap: 5rem
+  background-color: $secondary-color500
+  padding: 2rem 2rem
+  position: relative
+
+.pawbond-post::before
+  content: ""
+  position: absolute
+  top: 50%
+  left: 65.77777777%
+  transform: translate(-66.666666666%, -50%)
+  width: 64px
+  height: 64px
+  background-image: url(../../../assets/heartdog.png)
+  background-repeat: no-repeat
+  background-size: 100%
+
+/* PawPal */
+.pawpal
+  border-radius: 2rem
+  display: grid
+  grid-template-columns: 2fr 3fr
+  gap: 1rem
+  background-color: $neutral-color100
+
+.pawpal-photo
+  border-radius: 2rem 0 0 2rem
+  width: 300px
+  height: 300px
+  object-fit: cover
+  grid-row: 1 / -1
+  box-shadow: -16px 0px 15px 0px rgba(0,0,0,0.1)
+
+.pawpal .info
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: 1fr 2fr 1fr
+  padding: 1rem
+
+.pawpal .description
+  grid-column: span 2
+
+.pawpal .breed
+  text-align: right
+
+.pawpal .owner
+  align-self: end
+  grid-column : 1 / -1
+
+/* Pawbond Post Wanted Partner  */
+.pawbond-post-wanted-partner
+  border-radius: 2rem
+  display: grid
+  grid-template-rows: 3fr 1fr
+  text-align: end
+  justify-items: end
+  background-color: $neutral-color100
+
+.pawbond-post-wanted-partner .info
+  display: grid
+  text-align: end
+  justify-items: end
+  padding: 1rem
+
+.pawbond-post-button
+  all: unset
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 30%
+  padding: .5rem 1rem
+  border-radius: 2rem 0
+  background-color: $primary-color500
+  color: $neutral-color100
+  font-size: 1.5rem
+  font-weight: 700
+  cursor: pointer

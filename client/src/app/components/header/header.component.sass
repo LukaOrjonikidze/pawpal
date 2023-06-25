@@ -1,0 +1,33 @@
+@import '../../../styles.sass'
+
+.main-icon
+  width: 72px
+
+.dog-profile-icon
+  width: 48px
+
+  &:hover
+    transition: 1s
+    rotate: 360deg
+
+.main-header
+  display: grid
+  position: sticky
+  top: 0
+  left: 0
+  z-index: 5
+  backdrop-filter: blur(40px)
+  grid-template-columns: 1fr 2fr 1fr
+  align-items: center
+  width: 100%
+  gap: 1rem
+  padding: 1.25rem 1.25rem
+  box-shadow: 1px 1px 30px 0px rgba(0,0,0,0.1)
+
+  \:last-child
+    justify-self: end
+
+.nav-items
+  display: flex
+  justify-content: space-between
+  list-style-type: none
