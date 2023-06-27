@@ -2,6 +2,10 @@
 
 .main-icon
   width: 72px
+.menu
+  display: none
+.menu img
+  width: 72px
 
 .dog-profile-icon
   width: 48px
@@ -31,3 +35,12 @@
   display: flex
   justify-content: space-between
   list-style-type: none
+
+// media query
+@media (max-width: 1000px)
+  nav
+    justify-self: center
+  .nav-items li
+    display: none
+  .menu
+    display: inline !important
