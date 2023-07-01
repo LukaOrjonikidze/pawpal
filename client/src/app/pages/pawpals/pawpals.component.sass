@@ -1,16 +1,31 @@
+
 #pawpals-section
-  width: 100%
-  max-width: 1600px
-  margin: 0 auto
-  padding: 1.25rem 1.25rem
+  background-image: url('../../../assets/blob-scatter-haikei.svg')
+  background-size: contain
+  background-repeat: repeat-y
+  animation: scroll 20s linear infinite
 
 .pawpals
   display: grid
   grid-template-columns: 1fr
   gap: 5rem
+  width: 100%
+  max-width: 1600px
+  margin: 0 auto
+  padding: 1.25rem 1.25rem
+
+@keyframes scroll
+  0%
+    background-position: 0 0
+
+  100%
+    background-position: 0 calc(100vh - 100%)
+
+
 
 
 @media screen and (max-width: 375px)
   #pawpals-section
     grid-template-columns: 1fr 1fr
     padding: 0
+
