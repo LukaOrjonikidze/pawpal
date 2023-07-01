@@ -1,5 +1,5 @@
 # PawPal
-![Pawpal Logo][https://i.imgur.com/LbnXSLO.png]
+![Pawpal Logo](https://i.imgur.com/LbnXSLO.png)
 ## Introduction
 PawPal is a web application that allows users to find partners for their perfect pet. Users can search for pets based on their preferences and can also send pawbond requests to puppies. Users can also add their pets to the database and can also accept or reject pawbond requests.
 
