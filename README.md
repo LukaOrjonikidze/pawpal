@@ -4,11 +4,11 @@ PawPal is a web application that allows users to find partners for their perfect
 
 ## Technologies
 ### Front-end 
-HTML, CSS, JavaScript, Bootstrap, React, Typescript
+Angular, Typescript, SASS
 ### Back-end
 C#, ASP.NET Core, Entity Framework Core
 ### Database 
-PostgreSQL
+Microsoft SQL Server
 
 
 ## How to run the application
