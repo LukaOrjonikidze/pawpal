@@ -3,7 +3,7 @@ using server.Models;
 
 namespace server.Interfaces
 {
-    public interface IPawbondService
+    public interface IPawbondsService
     {
         Task<UsersPawbonds> GetPawbonds(int pawpalId);
         Task<Pawbond> CreatePawbond(int pawbondPostId, int pawpalId);

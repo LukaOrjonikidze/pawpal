@@ -2,7 +2,7 @@
 
 namespace server.Interfaces
 {
-    public interface IPawbondPostService
+    public interface IPawbondPostsService
     {
         Task<PawbondPost> AddPawbondPost(AddPawbondPostRequest addPawbondPostRequest);
         Task<List<PawbondPost>> GetPawbondPosts();

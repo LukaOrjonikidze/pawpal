@@ -6,10 +6,10 @@ using server.Models;
 
 namespace server.Implementations
 {
-    public class PawbondService : IPawbondService
+    public class PawbondsService : IPawbondsService
     {
         private readonly PawpalDbContext _dbContext;
-        public PawbondService(PawpalDbContext dbContext)
+        public PawbondsService(PawpalDbContext dbContext)
         {
             _dbContext = dbContext;
         }

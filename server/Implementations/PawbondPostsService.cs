@@ -5,10 +5,10 @@ using server.Models;
 
 namespace server.Implementations
 {
-    public class PawbondPostService : IPawbondPostService
+    public class PawbondPostsService : IPawbondPostsService
     {
         private readonly PawpalDbContext _dbContext;
-        public PawbondPostService(PawpalDbContext dbContext)
+        public PawbondPostsService(PawpalDbContext dbContext)
         {
             _dbContext = dbContext;
         }

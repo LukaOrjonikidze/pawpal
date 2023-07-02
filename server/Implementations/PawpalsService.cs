@@ -4,10 +4,10 @@ using server.Models;
 
 namespace server.Implementations
 {
-    public class PawpalService : IPawpalService
+    public class PawpalsService : IPawpalsService
     {
         private readonly PawpalDbContext _dbContext;
-        public PawpalService(PawpalDbContext dbContext) {
+        public PawpalsService(PawpalDbContext dbContext) {
             _dbContext = dbContext;
         }
 

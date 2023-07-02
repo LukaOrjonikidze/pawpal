@@ -2,7 +2,7 @@
 
 namespace server.Interfaces
 {
-    public interface IPawpalService
+    public interface IPawpalsService
     {
         Task<Pawpal> CreatePawpal(CreatePawpalRequest createPawpalRequest);
     }
