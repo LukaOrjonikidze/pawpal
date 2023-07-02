@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using server.Interfaces;
 using server.Models;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace server.Controllers
 {
@@ -12,6 +13,7 @@ namespace server.Controllers
         public PawpalsController(IPawpalsService pawpalsService) => _pawpalsService = pawpalsService;
 
         [HttpPost]
+        [SwaggerResponse(200, "OK", typeof(Pawpal))]
         public async Task<IActionResult> CreatePawpal(CreatePawpalRequest createPawpalRequest)
         {
             Pawpal pawpal = await _pawpalsService.CreatePawpal(createPawpalRequest);

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using server.Interfaces;
 using server.Models;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace server.Controllers
 {
@@ -12,6 +13,7 @@ namespace server.Controllers
         public PawbondPostsController(IPawbondPostsService pawbondPostsService) => _pawbondPostsService = pawbondPostsService;
 
         [HttpGet]
+        [SwaggerResponse(200, "OK", typeof(List<PawbondPost>))]
         public async Task<IActionResult> GetPawbondPosts()
         {
             List<PawbondPost> pawbondPosts = await _pawbondPostsService.GetPawbondPosts();
@@ -19,6 +21,7 @@ namespace server.Controllers
         }
 
         [HttpPost]
+        [SwaggerResponse(200, "OK", typeof(PawbondPost))]
         public async Task<IActionResult> AddPawbondPost(AddPawbondPostRequest addPawbondPostRequest)
         {
             PawbondPost pawbondPost = await _pawbondPostsService.AddPawbondPost(addPawbondPostRequest);
@@ -27,6 +30,7 @@ namespace server.Controllers
 
         [HttpDelete]
         [Route("{pawbondPostId:int}")]
+        [SwaggerResponse(200, "OK", typeof(PawbondPost))]
         public async Task<IActionResult> DeletePawbondPost([FromRoute] int pawbondPostId)
         {
             PawbondPost? pawbondPost = await _pawbondPostsService.DeletePawbondPost(pawbondPostId);
