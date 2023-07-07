@@ -9,7 +9,7 @@ Angular, Typescript, SASS
 ### Back-end
 C#, ASP.NET Core, Entity Framework Core
 ### Database 
-Microsoft SQL Server
+SQLite
 
 
 ## How to run the application
@@ -17,8 +17,7 @@ Microsoft SQL Server
 ### Pre-requisites
 1. Install Node.js
 2. Install ASP.NET Core
-3. Install Microsoft SQL Server
-4. Install Angular CLI
+3. Install Angular CLI
 
 ### Front-End
 1. Open the Front-End folder in the terminal
