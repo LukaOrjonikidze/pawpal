@@ -1,20 +1,20 @@
 <div class="pawbond-post">
   <div class="pawpal">
-      <img class="pawpal-photo" src="{{pawbondPost.pawpal.photo}}" alt="dog-image">
+      <img class="pawpal-photo" src="{{pawbondPost.author.photo}}" alt="dog-image">
       <div class="info">
-        <strong class="name">{{pawbondPost.pawpal.name}} · {{pawbondPost.pawpal.age}}</strong>
-        <span class="breed">{{pawbondPost.pawpal.breed}}</span>
-        <span class="description">{{pawbondPost.pawpal.description}}</span>
-        <span class="owner">{{pawbondPost.pawpal.owner}}</span>
+        <strong class="name">{{pawbondPost.author.name}} · {{pawbondPost.author.age}}</strong>
+        <span class="breed">{{pawbondPost.author.breed}}</span>
+        <span class="description">{{pawbondPost.author.description}}</span>
+        <span class="owner">{{pawbondPost.author.owner}}</span>
       </div>
   </div>
   <img class="heart-icon" src="assets/heartdog.png" />
   <div class="pawbond-post-wanted-partner">
       <div class="info">
         <strong class="heading">Looking For</strong>
-        <span class="age">Age: {{pawbondPost.wantedPartner.age}}</span>
-        <span class="breed">Breed: {{pawbondPost.wantedPartner.breed}}</span>
-        <span class="description">Description: {{pawbondPost.wantedPartner.description}}</span>
+        <span class="age">Age: {{pawbondPost.wantedPartnerAge}}</span>
+        <span class="breed">Breed: {{pawbondPost.wantedPartnerBreed}}</span>
+        <span class="description">Description: {{pawbondPost.wantedPartnerDescription}}</span>
       </div>
       <button class="pawbond-post-button">PawBond</button>
   </div>

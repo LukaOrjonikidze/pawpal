@@ -18,7 +18,7 @@ namespace server.Implementations
             Pawpal author = await _dbContext.Pawpals.FindAsync(addPawbondPostRequest.AuthorId);
             PawbondPost pawbondPost = new PawbondPost()
             {
-                AuthorId = addPawbondPostRequest.AuthorId,
+                AuthorId = author.Id,
                 Author = author,
                 WantedPartnerBreed = addPawbondPostRequest.WantedPartnerBreed,
                 WantedPartnerAge = addPawbondPostRequest.WantedPartnerAge,
@@ -44,7 +44,7 @@ namespace server.Implementations
 
         public async Task<List<PawbondPost>> GetPawbondPosts()
         {
-            List<PawbondPost> pawbondPosts = await _dbContext.PawbondPosts.ToListAsync();
+            List<PawbondPost> pawbondPosts = await _dbContext.PawbondPosts.Include(p => p.Author).ToListAsync();
             return pawbondPosts;
         }
     }

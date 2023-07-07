@@ -27,7 +27,7 @@ namespace server.Controllers
             Pawbond pawbond = await _pawbondsService.CreatePawbond(pawbondPostId, pawpalId);
             return Ok(pawbond);
         }
-        [HttpGet]
+        [HttpPatch]
         [Route("{pawbondId:int}")]
         [SwaggerResponse(200, "OK", typeof(Pawbond))]
         public async Task<IActionResult> UpdatePawbond([FromRoute] int pawbondId, [FromQuery] StatusType status)

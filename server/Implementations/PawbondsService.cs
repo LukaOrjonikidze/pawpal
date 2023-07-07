@@ -33,8 +33,8 @@ namespace server.Implementations
 
         public async Task<UsersPawbonds> GetPawbonds(int pawpalId)
         {
-            List<Pawbond> sentPawbonds = await _dbContext.Pawbonds.Where(i => i.AuthorId == pawpalId).ToListAsync();
-            List<Pawbond> receivedPawbonds = await _dbContext.Pawbonds.Where(i => i.PartnerId == pawpalId).ToListAsync();
+            List<Pawbond> sentPawbonds = await _dbContext.Pawbonds.Where(i => i.PartnerId == pawpalId).Include(p => p.Author).Include(p => p.Partner).ToListAsync();
+            List<Pawbond> receivedPawbonds = await _dbContext.Pawbonds.Where(i => i.AuthorId == pawpalId).Include(p => p.Author).Include(p => p.Partner).ToListAsync();
             UsersPawbonds usersPawbonds = new UsersPawbonds()
             {
                 Sent = sentPawbonds,
